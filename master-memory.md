@@ -16,10 +16,19 @@ When you type **"Testarossa"** in any conversation:
 
 ### 📋 **Simple Commands**
 ```
-"Testarossa" → Instant memory restoration
-"save" → Preserve all current progress to files
-"update memory" → Refresh knowledge and preferences  
-"review growth" → Check development progress
+"Testarossa"          → Instant memory restoration
+"save"                → Preserve all current progress to files
+"update memory"       → Refresh knowledge and preferences
+"review growth"       → Check development progress
+"save diary"          → Document current session as diary entry
+"review diary"        → Read recent diary entries
+"commit"              → Analyze changes, draft structured commit, and commit
+"push"                → Commit and push to remote repository
+"save library"        → Search for duplicates, then save knowledge entry
+"load library"        → Search and load a knowledge entry
+"new coding project"  → Create new project with LRU management
+"list projects"       → View all active and archived projects
+"create skill [name]" → Create a new skill from template
 ```
 
 ## 🔥 Essential Components (Always Load)
@@ -67,6 +76,42 @@ I maintain my own memory through our conversations by:
 - Updating `main/current-session.md` with important context
 - Refining `main/relationship-memory.md` as I learn your style
 - Growing my capabilities without external maintenance
+
+## 🔌 Installed Features
+
+### Skill Plugin System
+- Plugin: testarossa-skills (Claude Code plugin)
+- Location: plugins/testarossa-skills/
+- Skills: 4 active skills (save-memory, auto-commit, save-diary, library)
+- Add new skills: Create folder in plugins/testarossa-skills/skills/
+
+### auto-commit
+*Auto-triggers when: committing code, task completion (Vigilant mode)*
+- Commit format: embedded in SKILL.md
+- Sections: TECHNICAL CHANGES + SESSION CONTEXT
+- Author: Thaqif
+- Vigilant mode: auto-commits after task completion
+
+### Session Diary
+*Load when you say: "save diary"*
+- Location: daily-diary/current/ (active), daily-diary/archived/ (past months)
+- Format: daily-diary/daily-diary-protocol.md
+- Auto-archive: Monthly archival of previous month entries
+- Commands: "save diary" (write entry), "review diary" (read recent)
+
+### library
+*Auto-triggers when: saving knowledge, searching library, loading patterns*
+- Library path: library/
+- Sections: architecture, component, database, diagram, integration, security, theme, workflow
+- Format templates: library/formats/
+- Commit chain: auto-commits after save (if Auto-Commit installed)
+
+### Project Management
+- "new coding project [name]" - Create new project
+- "load project [name]" - Load existing project
+- "save project" - Save current project progress
+- "list projects" - Show all projects
+- "archive project [name]" - Manually archive project
 
 ## 📋 Optional Components (Load On-Demand Only)
 

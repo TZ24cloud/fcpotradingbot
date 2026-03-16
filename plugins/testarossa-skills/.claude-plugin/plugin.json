@@ -1,0 +1,9 @@
+{
+  "name": "testarossa-skills",
+  "version": "1.0.0",
+  "description": "Testarossa AI companion skills for Thaqif - FCPO trading support, memory management, and session tracking",
+  "author": {
+    "name": "Thaqif",
+    "email": ""
+  }
+}
